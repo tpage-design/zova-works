@@ -1,4 +1,4 @@
-﻿import { siteContent } from "../content/siteContent";
+import { siteContent } from "../content/siteContent";
 import type { Language } from "../types";
 import { HeroVisual } from "./VisualMockups";
 
@@ -10,7 +10,7 @@ export function Hero({ language }: HeroProps) {
   const content = siteContent.hero;
 
   return (
-    <section id="top" className="hero section-shell">
+    <section id="top" className={`hero section-shell hero--${language}`}>
       <div className="hero-copy">
         <span className="eyebrow hero-animate">{content.kicker[language]}</span>
         <h1 className="hero-title hero-animate">
@@ -37,4 +37,5 @@ export function Hero({ language }: HeroProps) {
     </section>
   );
 }
+
 
