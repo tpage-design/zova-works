@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   color-scheme: light;
   --black: #111111;
   --deep-gray: #2b2b2b;
@@ -1817,3 +1817,181 @@ body {
     font-size: clamp(38px, 10.6vw, 44px);
   }
 }
+
+/* Mobile split-layout safety: prevent any two-column section from squeezing Chinese copy. */
+@media (max-width: 768px) {
+  .hero,
+  .hero-grid,
+  .hero-content,
+  .section-grid,
+  .split-section,
+  .split-layout,
+  .experience-section,
+  .experience-grid,
+  .capability-section,
+  .capability-grid,
+  .product-grid,
+  .process-section,
+  .process-grid,
+  .about-section,
+  .about-grid,
+  .contact-section,
+  .contact-grid,
+  .section-heading,
+  .section-heading--split,
+  .capability-row,
+  .process-timeline,
+  .moq-band__inner,
+  .about-layout,
+  .contact-layout,
+  .products-editorial,
+  .product-direction,
+  .product-direction--reverse,
+  .retail-proof__inner,
+  .footer {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-areas: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .hero > *,
+  .hero-grid > *,
+  .hero-content > *,
+  .section-grid > *,
+  .split-section > *,
+  .split-layout > *,
+  .experience-section > *,
+  .experience-grid > *,
+  .capability-section > *,
+  .capability-grid > *,
+  .product-grid > *,
+  .process-section > *,
+  .process-grid > *,
+  .about-section > *,
+  .about-grid > *,
+  .contact-section > *,
+  .contact-grid > *,
+  .section-heading > *,
+  .section-heading--split > *,
+  .capability-row > *,
+  .process-timeline > *,
+  .moq-band__inner > *,
+  .about-layout > *,
+  .contact-layout > *,
+  .products-editorial > *,
+  .product-direction > *,
+  .product-direction--reverse > *,
+  .retail-proof__inner > *,
+  .footer > *,
+  .about-primary-copy,
+  .about-side-copy,
+  .project-experience-note,
+  .product-direction__copy,
+  .product-direction__media,
+  .product-direction__capability,
+  .retail-proof__heading,
+  .retail-proof__body,
+  .moq-copy,
+  .moq-numbers,
+  .contact-form,
+  .contact-aside,
+  .hero-copy,
+  .hero-visual-wrap {
+    grid-column: 1 / -1 !important;
+    grid-area: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .section-shell,
+  .moq-band__inner,
+  .retail-proof__inner,
+  .footer {
+    width: min(100% - 40px, var(--max-width)) !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  .section-title,
+  .section-heading,
+  .section-heading h2,
+  .section-heading p,
+  .section-description,
+  .hero-title,
+  .hero-description,
+  .hero-subtitle,
+  .hero-capability-tag,
+  .coordination-line,
+  .about-layout p,
+  .about-primary-copy p,
+  .about-side-copy p,
+  .project-experience-note span,
+  .project-experience-note small,
+  .product-direction h3,
+  .product-direction p,
+  .product-direction__capability,
+  .retail-proof h2,
+  .retail-proof__body p,
+  .moq-copy h2,
+  .moq-copy p {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    line-break: auto !important;
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+  }
+
+  .section-heading,
+  .section-heading--split {
+    align-items: start !important;
+    gap: 18px !important;
+  }
+
+  .about-layout,
+  .retail-proof__inner,
+  .moq-band__inner,
+  .contact-layout,
+  .product-direction,
+  .product-direction--reverse {
+    gap: 24px !important;
+  }
+
+  .about-primary-copy,
+  .about-side-copy {
+    display: grid !important;
+    gap: 20px !important;
+  }
+
+  .product-direction h3 {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .product-direction h3::before {
+    flex: 0 0 24px !important;
+    width: 24px !important;
+  }
+
+  .process-node {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .retail-proof__body ul,
+  .contact-form {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+  }
+}
+
