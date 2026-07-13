@@ -1,4 +1,4 @@
-﻿import { siteContent } from "../content/siteContent";
+import { siteContent } from "../content/siteContent";
 import type { Language } from "../types";
 import { SectionHeading } from "./SectionHeading";
 
@@ -19,10 +19,6 @@ export function About({ language }: AboutProps) {
         </div>
         <div className="about-side-copy">
           <p>{content.note[language]}</p>
-          <div className="project-experience-note">
-            <span>{content.selected[language]}</span>
-            <small>{content.selectedNote[language]}</small>
-          </div>
         </div>
       </div>
     </section>

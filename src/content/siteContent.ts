@@ -1,4 +1,4 @@
-﻿import type { Capability, Language, ProcessStep, Product } from "../types";
+import type { Capability, Language, ProcessStep, Product } from "../types";
 
 export const languages: { code: Language; label: string }[] = [
   { code: "en", label: "EN" },
@@ -106,13 +106,23 @@ export const siteContent = {
       en: "We support projects that combine paper products, packaging and manual assembly — from branded notebooks and art paper ranges to retail-ready stationery and creative product sets.",
       zh: "我们支持纸品、包装与手工组装结合的项目，从品牌笔记本、艺术纸系列，到可直接零售的文具和创意产品套装。"
     },
-    selected: {
-      en: "Selected Project Experience",
-      zh: "精选项目经验"
+  },
+  manufacturing: {
+    title: {
+      en: "Manufacturing & Production Network",
+      zh: "真实制造与生产协同"
     },
-    selectedNote: {
-      en: "Reserved for future anonymous project examples.",
-      zh: "预留用于后续展示匿名项目案例。"
+    body: {
+      en: "We coordinate paper-product manufacturing, accordion-book assembly, paper bags and packaging, finishing, manual assembly and bulk delivery — from sampling to scaled production and shipment preparation.",
+      zh: "我们协调纸品制作、风琴本组装、纸袋与包装、后道加工、手工装配及批量交付资源，支持从样品开发到规模化生产与出货准备。"
+    },
+    support: {
+      en: "A selection of our manufacturing resources, production processes and product directions. Each project can be coordinated around its required structure, materials, finishing, quantity and delivery needs.",
+      zh: "以下为我们部分制造资源、生产流程与产品方向的真实展示。实际项目可根据产品结构、材料、工艺、数量和交付需求协调不同生产资源。"
+    },
+    sceneNote: {
+      en: "Real production scenes from our manufacturing partners and coordinated facilities.",
+      zh: "来自制造合作伙伴与协同生产设施的真实生产场景。"
     }
   },
   contact: {
